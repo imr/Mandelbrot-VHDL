@@ -65,6 +65,13 @@ applicable agreement for further details.
 		(text "VGA_VS" (rect 89 75 131 87)(font "Arial" ))
 		(line (pt 152 80)(pt 136 80)(line_width 1))
 	)
+	(port
+		(pt 152 96)
+		(output)
+		(text "start" (rect 0 0 35 12)(font "Arial" ))
+		(text "start" (rect 96 91 131 103)(font "Arial" ))
+		(line (pt 152 96)(pt 136 96)(line_width 1))
+	)
 	(drawing
 		(rectangle (rect 16 16 136 112)(line_width 1))
 	)
