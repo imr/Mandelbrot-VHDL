@@ -9,8 +9,8 @@ USE work.fixed_pkg.all;
 
 ENTITY Math IS
 	PORT(
-		x_const, y_const		:IN STD_LOGIC_VECTOR(35 downto 0);
 		clk, rst					:IN STD_LOGIC;
+		x_const, y_const		:IN STD_LOGIC_VECTOR(35 downto 0);
 		result					:OUT STD_LOGIC_VECTOR(15 downto 0)
 	);
 END ENTITY Math;

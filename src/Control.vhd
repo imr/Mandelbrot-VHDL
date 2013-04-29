@@ -8,11 +8,12 @@ USE work.fixed_pkg.all;
 
 ENTITY Control IS
 	PORT(
+		clk, rst						:IN STD_LOGIC;
+		Zoom, ZoomX, ZoomY		:IN STD_LOGIC;
 		x_const, y_const			:OUT STD_LOGIC_VECTOR(35 downto 0);
 		x_addr, y_addr, w_addr	:OUT STD_LOGIC_VECTOR(9 downto 0);
-		WE_const, WE				:OUT STD_LOGIC;
-		Zoom, ZoomX, ZoomY		:IN STD_LOGIC;
-		clk, rst						:IN STD_LOGIC
+		WE_const, WE				:OUT STD_LOGIC
+
 	);
 END ENTITY Control;
 
