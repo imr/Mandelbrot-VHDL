@@ -51,16 +51,16 @@ BEGIN
 				h_pixel <= to_sfixed(0.0026146667, h_pixel);
 				x_span <= to_sfixed(4, x_span);
 				y_span <= to_sfixed(2, y_span);
-				x_counter <= "0000000000";
-				y_counter <= "0000000000";
-				w_counter <= "0000000000";
-				pixel_counter <= X"00000";
 				WE_const <= '1';
 				WE <= '0';
 				cur_state <= A;
 			ELSE
 				CASE cur_state IS
 					WHEN A =>
+						x_counter <= "0000000000";
+						y_counter <= "0000000000";
+						w_counter <= "0000000000";
+						pixel_counter <= X"00000";
 						WE_const <= '1';
 						WE <= '0';
 						cur_state <= B;
@@ -123,10 +123,6 @@ BEGIN
 							h_pixel <= h_npixel;
 							x_span <= x_span sra 1;
 							y_span <= y_span sra 1;
-							x_counter <= "0000000000";
-							y_counter <= "0000000000";
-							w_counter <= "0000000000";
-							pixel_counter <= X"00000";
 							cur_state <= G;
 						END IF;
 					WHEN G =>
